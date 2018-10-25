@@ -37,11 +37,12 @@ public class CustomerList {
        // if(Integer.parseInt(Customer)= true){
         
   //  }    
-        while(Customer.length() == 0 ||!Character.isDigit(Customer.charAt(0))||!Character.isDigit(Customer.charAt(1)) ){
+        Double customer = Double.parseDouble(Customer);
+        while(!Character.isDigit(Customer.charAt(0)) && !Character.isDigit(Customer.charAt(1)) ){
                 JOptionPane.showMessageDialog(null,"Invalid input");//Outputs invalid input
                 Customer = JOptionPane.showInputDialog("Input amount of customers"); 
             }
-        Double customer = Double.parseDouble(Customer);
+        
         for(int i=1; i <= customer; i++) {
             String Cust = JOptionPane.showInputDialog("Input Name of Customer");
                 while(Cust != null && Cust.isEmpty()){
